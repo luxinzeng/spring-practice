@@ -1,14 +1,13 @@
-import com.itheima.service.UserService;
+import com.itheima.domain.Account;
+import com.itheima.service.AccountService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class UserApp {
+public class App {
     public static void main(String[] args) {
-        //2.加载配置文件
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //3.获取资源
-        UserService userService = (UserService)ctx.getBean("userService");
-
-        userService.save();
+        AccountService accountService = (AccountService)ctx.getBean("accountService");
+        Account ac = accountService.findById(1);
+        System.out.println(ac);
     }
 }
