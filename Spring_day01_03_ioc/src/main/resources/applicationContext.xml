@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl">
+<!--        3.将要注入的引用类型的变量通过property属性进行注入，对应的name是要注入-->
+<!--        的参数名，（重点）使用ref属性声明要注入的bean的id-->
+        <property name="userDao" ref="userDao"/><!--   这句话就是在给userDao注入对象     -->
+<!--        property中有两个属性ref对应引用类型数据，value对应非引用类型-->
+        <property name="num" value="666"/>
+        
+        <property name="bookDao" ref="bookDao"/>
+        
+    </bean>
+<!--    2.将要注入的资源声明为bean-->
+    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
+<!--    这里的class="com.itheima.dao.impl.UserDaoImpl"是给spring容器使用的-->
+<!--    而在serviceImpl类中的导包是给代码编译用的-->
+
+
+<!--    property子标签的引入（List，props，array，set，map）-->
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+        <property name="al">
+            <list>
+                <value>itheima</value>
+                <value>666</value>
+            </list>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="name">itheima666</prop>
+                <prop key="value">666666</prop>
+            </props>
+        </property>
+        <property name="arr">
+            <array>
+                <value>123456</value>
+                <value>66666</value>
+            </array>
+        </property>
+        <property name="hs">
+            <set>
+                <value>itheima</value>
+                <value>66666</value>
+            </set>
+        </property>
+        <property name="hm">
+            <map>
+                <entry key="name" value="itheima66666"/>
+                <entry key="value" value="666666666"/>
+            </map>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.itheima</groupId>
+  <artifactId>Spring_day01_04_ioc</artifactId><!--  jar包的名称-->
+  <version>1.0-SNAPSHOT</version>
+  <!--  上面三个就是Maven通过他们确定唯一的项目，往后只需要在项目中<dependency>-->
+  <!--  中填写，就可以引入依赖-->
+  <packaging>jar</packaging>
+
+  <name>Spring_day01_04_ioc</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies><!--只能有一个-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.1.9.RELEASE</version>
+    </dependency>
+    <dependency>
+<!--      引入阿里云的依赖,具体是帮助数据库和java连接的插件-->
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.16</version>
+    </dependency>
+  </dependencies>
+</project>
