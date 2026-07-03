@@ -34,7 +34,7 @@
         <property name="typeAliasesPackage" value="com.itheima.domain"/>
     </bean>
 
-<!--     加载mybatis映射配置扫描，将其作为spring的bean进行管理-->
+<!--     加载包下的所有接口，将其作为spring的bean进行管理-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.itheima.dao"/>
     </bean>

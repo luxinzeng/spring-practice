@@ -5,4 +5,5 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 1.创建spring控制的资源-->
     <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"/>
+
 </beans>
