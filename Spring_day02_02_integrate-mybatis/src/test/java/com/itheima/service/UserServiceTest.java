@@ -20,7 +20,7 @@ public class UserServiceTest {
     public void testFindById(){
         Account ac = accountService.findById(2);
 //        System.out.println(ac);
-        Assert.assertEquals("Jock1",ac.getName());
+        Assert.assertEquals("Jock",ac.getName());
     }
 
 }
