@@ -11,7 +11,13 @@
     <context:component-scan base-package="com.itheima"/>
 
 <!-- 1.创建spring控制的资源-->
-<!--    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"/>-->
-<!--    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>-->
-<!--    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+<!--    一<bean id="userService" class="com.itheima.service.impl.UserServiceImpl"/>-->
+<!--    二<bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>-->
+<!--    三<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>-->
+<!--        四<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+<!--            <property name="driverClassName" value="com.mysql.jdbc.Driver"/>-->
+<!--            <property name="url" value="jdbc:mysql.jdbc.Driver"/>-->
+<!--            <property name="username" value="root"/>-->
+<!--            <property name="password" value="root"/>-->
+<!--        </bean>-->
 </beans>

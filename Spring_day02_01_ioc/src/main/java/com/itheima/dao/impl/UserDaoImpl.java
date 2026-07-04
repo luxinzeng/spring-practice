@@ -8,12 +8,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 
-@Repository("userDao")
+@Repository("userDao1")//二
 public class UserDaoImpl implements UserDao {
-
-    public UserDaoImpl(){
-        System.out.println("dao running....");
-    }
 
     public void save() {
         System.out.println("user dao running...1");

@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 //config:Config 类（通常叫 配置类）在Spring中就是专门用来管理第三方Bean的
-
-@Component
+//专门用于第三方配置，在bean中无法写入property
+//@Component//四
 public class JDBCConfig {
     @Bean("dataSource")//通过注解的方式，引入第三方的依赖
     public DruidDataSource getDataSource(){
