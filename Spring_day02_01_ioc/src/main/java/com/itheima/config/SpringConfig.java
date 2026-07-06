@@ -1,5 +1,5 @@
 package com.itheima.config;//最后面全面取代XML方式的注解开发的最后一步
-
+//Spring是Spring框架的核心配置类
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

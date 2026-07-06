@@ -4,6 +4,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
@@ -28,6 +29,7 @@ public class MybatisConfig {
 
     @Bean
     public MapperScannerConfigurer getMapperScannerConfigurer(){
+        System.out.println("===== MapperScannerConfigurer 执行了 =====");
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
         msc.setBasePackage("com.itheima.dao");
         return msc;
