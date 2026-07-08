@@ -8,7 +8,7 @@ import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import javax.sql.DataSource;
-//在引入了.xml文件，这个文件就已经被取代了
+
 public class TxAdvice {
 
     private DataSource dataSource;

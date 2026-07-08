@@ -31,7 +31,7 @@ public class AccountServiceImpl implements AccountService {
 //        //事务状态
 //        TransactionStatus ts = ptm.getTransaction(td);
         accountDao.inMoney(outName,money);
-        int i = 1/0;
+//        int i = 1/0;
         accountDao.outMoney(inName,money);
 //        //提交事务
 //        ptm.commit(ts);

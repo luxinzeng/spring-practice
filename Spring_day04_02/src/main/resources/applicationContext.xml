@@ -55,9 +55,10 @@
     </bean>
 <!--    定义了事务管理的通知类-->
     <tx:advice id="txAdvice" transaction-manager="txManager">
+<!--   为什么txManager，在同一.xml中会有两个名字txManager和txAdvice-->
+<!--    因为txAdvice是aop层的东西，txManager是事务层的东西-->
 <!--        定义受控的事务-->
         <tx:attributes>
-
 <!--            <tx:method name="*" read-only="false"/>--><!--标准写法-->
 <!--            <tx:method name="get*" read-only="true"/>-->
             <tx:method name="transfer" read-only="false"/>

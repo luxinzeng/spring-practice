@@ -54,7 +54,7 @@
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    //Spring 开启注解事务的开关，自动扫描@Transactional
+<!--    //Spring 开启注解事务的开关，自动扫描@Transactional-->
     <tx:annotation-driven transaction-manager="txManager"/>
 <!--&lt;!&ndash;    定义了事务管理的通知类&ndash;&gt;-->
 <!--    <tx:advice id="txAdvice" transaction-manager="txManager">-->

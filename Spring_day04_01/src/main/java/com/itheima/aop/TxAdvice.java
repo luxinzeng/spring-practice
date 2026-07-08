@@ -33,11 +33,12 @@ public class TxAdvice {
 //    }
     public Object transactionManager(ProceedingJoinPoint pjp) throws Throwable {
         //以下为编程式事务
-                //开启事务
+
         PlatformTransactionManager ptm = new DataSourceTransactionManager(dataSource);
         //事务定义
         TransactionDefinition td = new DefaultTransactionDefinition();
         //事务状态
+        //开启事务
         TransactionStatus ts = ptm.getTransaction(td);
 
         Object ret = pjp.proceed(pjp.getArgs());
